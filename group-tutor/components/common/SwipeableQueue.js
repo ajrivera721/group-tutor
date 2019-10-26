@@ -9,7 +9,6 @@ class SwipeableQueue extends React.Component {
 	// constructor method begins here:
     constructor(props) {
         super(props);
-        this.renderSeparator = this.renderSeparator.bind(this);
         this.success = this.success.bind(this);
         this.setScrollEnabled = this.setScrollEnabled.bind(this);
     
