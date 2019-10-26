@@ -11,6 +11,7 @@ class QueueItem extends React.Component {
         this.gestureDelay = -35;
         this.scrollViewEnabled = true;
       
+        const left = false;
         const position = new Animated.ValueXY();
         const panResponder = PanResponder.create({
           onStartShouldSetPanResponder: (evt, gestureState) => false,
@@ -18,6 +19,11 @@ class QueueItem extends React.Component {
           onPanResponderTerminationRequest: (evt, gestureState) => false,
           onPanResponderMove: (evt, gestureState) => {
             if (gestureState.dx > 35) {
+              this.setScrollViewEnabled(false);
+              let newX = gestureState.dx + this.gestureDelay;
+              position.setValue({x: newX, y: 0});
+            }
+            else if (gestureState.dx < -35){
               this.setScrollViewEnabled(false);
               let newX = gestureState.dx + this.gestureDelay;
               position.setValue({x: newX, y: 0});
@@ -61,8 +67,9 @@ class QueueItem extends React.Component {
             style={[this.state.position.getLayout()]} 
             {...this.panResponder.panHandlers}
             >
-            <View style={styles.absoluteCell}>
-                <Text style={styles.absoluteCellText}>Remove</Text>
+            
+            <View style={styles.leftCell}>
+                <Text style={styles.leftCellText}>Remove</Text>
             </View>
             <View style={styles.innerCell}>
                 <Text>
@@ -76,13 +83,19 @@ class QueueItem extends React.Component {
 }
 
 const styles = {
-    queueItem: {
+    queueItemLeft: {
         height: 80,
         marginLeft: -100,
         justifyContent: 'center',
         backgroundColor: 'red',
       },
-    absoluteCell: {
+      queueItemRight: {
+        height: 80,
+        marginLeft: width+100,
+        justifyContent: 'center',
+        backgroundColor: 'green',
+      },
+    leftCell: {
         position: 'absolute',
         top: 0,
         bottom: 0,
@@ -92,7 +105,22 @@ const styles = {
         justifyContent: 'flex-end',
         alignItems: 'center',
     },
-    absoluteCellText: {
+    leftCellText: {
+      color: '#fff',
+      marginRight: 20,
+      fontWeight: '500',
+    },
+    rightCell: {
+        position: 'absolute',
+        top: 0,
+        bottom: 0,
+        left: 0,
+        width: 100,
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+    },
+    rightCellText: {
       color: '#fff',
       marginRight: 20,
       fontWeight: '500',
