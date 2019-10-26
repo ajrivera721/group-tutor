@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { SafeAreaView, View, FlatList, StyleSheet, Text } from 'react-native';
+import { FlatList, StyleSheet} from 'react-native';
 import Constants from 'expo-constants';
 import { QueueItem } from '.';
 
@@ -9,44 +9,14 @@ class SwipeableQueue extends React.Component {
 	// constructor method begins here:
     constructor(props) {
         super(props);
-      
-        this.gestureDelay = -35;
-        this.scrollViewEnabled = true;
-      
-        const position = new Animated.ValueXY();
-        const panResponder = PanResponder.create({
-          onStartShouldSetPanResponder: (evt, gestureState) => false,
-          onMoveShouldSetPanResponder: (evt, gestureState) => true,
-          onPanResponderTerminationRequest: (evt, gestureState) => false,
-          onPanResponderMove: (evt, gestureState) => {
-            if (gestureState.dx > 35) {
-              this.setScrollViewEnabled(false);
-              let newX = gestureState.dx + this.gestureDelay;
-              position.setValue({x: newX, y: 0});
-            }
-          },
-          onPanResponderRelease: (evt, gestureState) => {
-            if (gestureState.dx < 150) {
-              Animated.timing(this.state.position, {
-                toValue: {x: 0, y: 0},
-                duration: 150,
-              }).start(() => {
-                this.setScrollViewEnabled(true);
-              });
-            } else {
-              Animated.timing(this.state.position, {
-                toValue: {x: width, y: 0},
-                duration: 300,
-              }).start(() => {
-                this.props.success(this.props.text);
-                this.setScrollViewEnabled(true);
-              });
-            }
-          },
-        });
-      
-        this.panResponder = panResponder;
-        this.state = {position};
+        this.renderSeparator = this.renderSeparator.bind(this);
+        this.success = this.success.bind(this);
+        this.setScrollEnabled = this.setScrollEnabled.bind(this);
+    
+        this.state = {
+          enable: true,
+          data: this.props.data,
+        };
       }
 
   setScrollEnabled(enable) {
