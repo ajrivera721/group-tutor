@@ -1,61 +1,61 @@
-﻿"We need some help figuring out why our predict completions is buggy, and we have no idea how to do autocomplete",
-Can I get help with finding more than one under score?,
-wanted to know how to pass in the next character in a string into the recursive function,
-I had some code but I don't know if it is the right algorithms,
-I need help with debugging my predictUnderscores,
-I need help with debugging my predictUnderscores,
-Need clarification on how comparators work,
-optimizing.. pruning the tree getting the max value under the tree not sure how to get and store this parameter,
-optimizing.. pruning the tree getting the max value under the tree not sure how to get and store this parameter,
-optimizing.. pruning the tree getting the max value under the tree not sure how to get and store this parameter,
-can I get help with finding string after under score?,
-I think my queue isn't pushing elements into the queue when it needs to push it.,
-Keep getting different outputs with the ref solution,Keep getting different outputs with the ref solution
-Unsure how to create comparator for priority queue,
-ust some questions about how to test optimization timing,
-Can I get help on how to find the under score,
-Question about helper method for predictionCompletions,
-I kind of comfuse the algorithms about the underscrores,"Algorithms, Wrong Output"
-Hi just need a bit of guidance on what I should be doing for the worksheet. Thanks!,Specifications
-we have a question about backtracking for predictUnderscore,"Algorithms, Implementation"
-Need help figuring out find multiple underscores and reducing the time complexity of predict completions.,"Algorithms, Implementation"
-Confused on what's happening with my underscore method ,Algorithms
-"Thinking about logic for the predict underscores, wondering if it is okay to do without recursion","Getting Started, Specifications, Programming Language"
-Handling subsequent underscores. Optimizing predict completions.,"Getting Started, Implementation"
-Questions on how to recurse properly in predictUnderscores,Specifications
-i am trying to optmize my predictcompletion but it was still slow,"Getting Started, Implementation, Runtime Error, Weird Behavior"
-"I need help with homework 2, question 3, monitor problem! Thanks.",Specifications
-"Predict underscores on multiple confusion , not sure on post underscore logic ",Implementation
-"Insert method not working, implementation is not working","Algorithms, Implementation, Wrong Output, Weird Debug"
-"I am not really sure why I cannot run files on ieng6; grepping for CLRF clearly shows that there is nothing there; yet, at the same time, it also shows that there are some files that are/aren't able to run normally. At this point, I am not sure where the problem is at. All of them are imported straight from github.",Weird Behavior
-clarification on predictunderscore resursion and how a data structure can be used in such recursion.,Specifications
-I want ask about the memory leak about code,"Testing, Wrong Output"
-can I get help understanding predictUnderscores?,
-Need clarification on using backtracking for predict underscore,
-issues when replacing vector of pairs with priority queue of pairs.,"Specifications, Algorithms, Implementation, Wrong Output"
-want to create prioorty queue but dont know how,Algorithms
-"I changed my implementation from max heap to min heap, then some weird bugs appeared.","Implementation, Wrong Output, Weird Debug"
-How to do predict underscore for tst?,"Algorithms, Implementation"
-"insert not functional, need help with logic for certain cases","Implementation, Testing, Weird Behavior, Weird Debug"
-"I am having trouble running executable on reference solution on ieng6 (I've been doing it on docker, but cannot for freq_dict.txt, so I am new to using ieng6 for this class). I get the following messages: ",
-Stuck on how to deal words with subsequent underscores. ,"Getting Started, Implementation"
-"If there are 2 or more underscores, I want to traverse that amount of children of that tree, but I'm unsure how to track those nodes.",
-profiling:/Code/cse100_pa2/build/src/25a6634@@autocomplete.cpp.executable@exe/util.cpp.gcda:Skip,
-profiling:/Code:Cannot create directory ,
-profiling:/Code/cse100_pa2/build/src/25a6634@@autocomplete.cpp.executable@exe/DictionaryTrie.cpp.gcda:Skip,
-profiling:/Code:Cannot create directory ,
-profiling:/Code/cse100_pa2/build/src/25a6634@@autocomplete.cpp.executable@exe/autocomplete.cpp.gcda:Skip,
-Stuck on how to deal words with subsequent underscores. ,
-"If there are 2 or more underscores, I want to traverse that amount of children of that tree, but I'm unsure how to track those nodes.",
-Would like to implement priority queue into predictCompletions instead of vector and unsure how. Also questions about starting predictUnderscore,"Algorithms, Implementation"
-"When diff the output of predict underscore to that of the reference, our frequency for the word got messed up but our algorithm seems to be correct.","Algorithms, Implementation, Testing, Runtime Error, Weird Behavior, Weird Debug"
-I just tested my predictUnderscores and it returns the wrong(and same) string ..,
-Need help with autocompletion(implementation + optimization),Implementation
-I have a deeper idea of what to go but I can't keep track of my strings. ,
-I need help with simplifying my tests for comparator. ,
-"Also, could you please help me with my destructor?",
-"predict completions works, need to covert to pass by reference need help","Algorithms, Implementation"
-"Need some help with gdb, want to see why runtime is slow",Testing
-questions about deconstrcutor and wierd compile errors,"Specifications, Runtime Error, Weird Behavior"
-need help understanding predict underscore and our implementation,Specifications
-Question about the logic of our predictCompletion and unsure why we failed 3/10 of our tests,
+﻿CSE 100,A,Q1,Debugging,B260,"We need some help figuring out why our predict completions is buggy, and we have no idea how to do autocomplete"
+CSE 100,B,Q1,Debugging,B260,Can I get help with finding more than one under score?
+CSE 100,C,Q1,Algorithms,B260,wanted to know how to pass in the next character in a string into the recursive function
+CSE 100,D,Q1,Algorithms,B260,I had some code but I don't know if it is the right algorithms
+CSE 100,E,Q1,Debugging,B260,I need help with debugging my predictUnderscores
+CSE 100,F,Q1,Debugging,B260,I need help with debugging my predictUnderscores
+CSE 100,G,Q1,Specifications,B260,Need clarification on how comparators work
+CSE 100,H,Q1,Implementation,B260,optimizing.. pruning the tree getting the max value under the tree not sure how to get and store this parameter
+CSE 100,I,Q1,Implementation,B260,optimizing.. pruning the tree getting the max value under the tree not sure how to get and store this parameter
+CSE 100,J,Q1,Implementation,B260,optimizing.. pruning the tree getting the max value under the tree not sure how to get and store this parameter
+CSE 100,K,Q1,Debugging,B260,can I get help with finding string after under score?
+CSE 100,L,Q1,Debugging,B260,I think my queue isn't pushing elements into the queue when it needs to push it.
+CSE 100,M,Q1,Testing,B260,Keep getting different outputs with the ref solution
+CSE 100,N,Q1,Getting Started,B260,Unsure how to create comparator for priority queue
+CSE 100,O,Q1,Testing,B260,just some questions about how to test optimization timing
+CSE 100,P,Q1,Debugging,B260,Can I get help on how to find the under score
+CSE 100,Q,Q1,Implementation,B260,Question about helper method for predictionCompletions
+CSE 100,R,Q1,Algorithms,B260,I kind of comfuse the algorithms about the underscrores
+CSE 100,S,Q1,Specifications,B260,Hi just need a bit of guidance on what I should be doing for the worksheet. Thanks!
+CSE 100,T,Q1,Algorithms,B260,we have a question about backtracking for predictUnderscore
+CSE 100,U,Q1,Algorithms,B260,Need help figuring out find multiple underscores and reducing the time complexity of predict completions.
+CSE 100,V,Q1,Algorithms,B260,Confused on what's happening with my underscore method 
+CSE 100,W,Q1,Getting Started,B260,"Thinking about logic for the predict underscores, wondering if it is okay to do without recursion"
+CSE 100,X,Q1,Getting Started,B260,Handling subsequent underscores. Optimizing predict completions.
+CSE 100,Y,Q1,Specifications,B260,Questions on how to recurse properly in predictUnderscores
+CSE 100,Z,Q1,Getting Started,B260,i am trying to optmize my predictcompletion but it was still slow
+CSE 100,AA,Q1,Specifications,B260,"I need help with homework 2, question 3, monitor problem! Thanks."
+CSE 100,AB,Q1,Implementation,B260,"Predict underscores on multiple confusion , not sure on post underscore logic "
+CSE 100,AC,Q1,Algorithms,B260,"Insert method not working, implementation is not working"
+CSE 100,AD,Q1,Weird Behavior,B260,"I am not really sure why I cannot run files on ieng6; grepping for CLRF clearly shows that there is nothing there; yet, at the same time, it also shows that there are some files that are/aren't able to run normally. At this point, I am not sure where the problem is at. All of them are imported straight from github."
+CSE 100,AE,Q1,Specifications,B260,clarification on predictunderscore resursion and how a data structure can be used in such recursion.
+CSE 100,AF,Q1,Testing,B260,I want ask about the memory leak about code
+CSE 100,AG,Q1,Specifications,B260,can I get help understanding predictUnderscores?
+CSE 100,AH,Q1,Specifications,B260,Need clarification on using backtracking for predict underscore
+CSE 100,AI,Q1,Specifications,B260,issues when replacing vector of pairs with priority queue of pairs.
+CSE 100,AJ,Q1,Algorithms,B260,want to create prioorty queue but dont know how
+CSE 100,AK,Q1,Implementation,B260,"I changed my implementation from max heap to min heap, then some weird bugs appeared."
+CSE 100,AL,Q1,Algorithms,B260,How to do predict underscore for tst?
+CSE 100,AM,Q1,Implementation,B260,"insert not functional, need help with logic for certain cases"
+CSE 100,AN,Q1,Debugging,B260,"I am having trouble running executable on reference solution on ieng6 (I've been doing it on docker, but cannot for freq_dict.txt, so I am new to using ieng6 for this class). I get the following messages: "
+CSE 100,AO,Q1,Getting Started,B260,Stuck on how to deal words with subsequent underscores. 
+CSE 100,AP,Q1,Specifications,B260,"If there are 2 or more underscores, I want to traverse that amount of children of that tree, but I'm unsure how to track those nodes."
+CSE 100,AQ,Q1,Debugging,B260,profiling:/Code/cse100_pa2/build/src/25a6634@@autocomplete.cpp.executable@exe/util.cpp.gcda:Skip
+CSE 100,AR,Q1,Debugging,B260,profiling:/Code:Cannot create directory 
+CSE 100,AS,Q1,Debugging,B260,profiling:/Code/cse100_pa2/build/src/25a6634@@autocomplete.cpp.executable@exe/DictionaryTrie.cpp.gcda:Skip
+CSE 100,AT,Q1,Debugging,B260,profiling:/Code:Cannot create directory 
+CSE 100,AU,Q1,Debugging,B260,profiling:/Code/cse100_pa2/build/src/25a6634@@autocomplete.cpp.executable@exe/autocomplete.cpp.gcda:Skip
+CSE 100,AV,Q1,Debugging,B260,Stuck on how to deal words with subsequent underscores. 
+CSE 100,AW,Q1,Debugging,B260,"If there are 2 or more underscores, I want to traverse that amount of children of that tree, but I'm unsure how to track those nodes."
+CSE 100,AX,Q1,Algorithms,B260,Would like to implement priority queue into predictCompletions instead of vector and unsure how. Also questions about starting predictUnderscore
+CSE 100,AY,Q1,Algorithms,B260,"When diff the output of predict underscore to that of the reference, our frequency for the word got messed up but our algorithm seems to be correct."
+CSE 100,AZ,Q1,Debugging,B260,I just tested my predictUnderscores and it returns the wrong(and same) string ..
+CSE 100,BA,Q1,Implementation,B260,Need help with autocompletion(implementation + optimization)
+CSE 100,BB,Q1,Implementation,B260,I have a deeper idea of what to go but I can't keep track of my strings. 
+CSE 100,BC,Q1,Implementation,B260,I need help with simplifying my tests for comparator. 
+CSE 100,BD,Q1,Implementation,B260,"Also, could you please help me with my destructor?"
+CSE 100,BE,Q1,Algorithms,B260,"predict completions works, need to covert to pass by reference need help"
+CSE 100,BF,Q1,Testing,B260,"Need some help with gdb, want to see why runtime is slow"
+CSE 100,BG,Q1,Specifications,B260,questions about deconstrcutor and wierd compile errors
+CSE 100,BH,Q1,Specifications,B260,need help understanding predict underscore and our implementation
+CSE 100,BI,Q1,Debugging,B260,Question about the logic of our predictCompletion and unsure why we failed 3/10 of our tests
