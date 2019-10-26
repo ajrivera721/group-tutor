@@ -62,7 +62,7 @@ class QueueItem extends React.Component {
 
     render() {
         return (
-        <View style={styles.queueItem}>
+        <View style={styles.queueItemLeft}>
             <Animated.View 
             style={[this.state.position.getLayout()]} 
             {...this.panResponder.panHandlers}
@@ -78,6 +78,22 @@ class QueueItem extends React.Component {
             </View>
             </Animated.View>
         </View>
+        <View style={styles.queueItemRight}>
+        <Animated.View 
+        style={[this.state.position.getLayout()]} 
+        {...this.panResponder.panHandlers}
+        >
+        
+        <View style={styles.rightCell}>
+            <Text style={styles.rightCellText}>Accept</Text>
+        </View>
+        <View style={styles.innerCell}>
+            <Text>
+            {this.props.text}
+            </Text>
+        </View>
+        </Animated.View>
+    </View>
         );
     }
 }
