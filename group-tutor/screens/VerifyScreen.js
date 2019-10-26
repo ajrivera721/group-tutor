@@ -10,6 +10,8 @@ class VerifyScreen extends Component {
         header: null
     };
 
+    component
+
     render () {
         return (
             <View style={{flex: 1}}>
