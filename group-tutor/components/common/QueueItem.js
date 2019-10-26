@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { SafeAreaView, View, FlatList, StyleSheet, Text, PanResponder, Animated } from 'react-native';
+import { SafeAreaView, View, FlatList, StyleSheet, Dimensions, Text, PanResponder, Animated } from 'react-native';
 import Constants from 'expo-constants';
 
 const {width} = Dimensions.get('window');
@@ -62,7 +62,7 @@ class QueueItem extends React.Component {
             {...this.panResponder.panHandlers}
             >
             <View style={styles.absoluteCell}>
-                <Text style={styles.absoluteCellText}>DELETE</Text>
+                <Text style={styles.absoluteCellText}>Remove</Text>
             </View>
             <View style={styles.innerCell}>
                 <Text>
@@ -92,11 +92,16 @@ const styles = {
         justifyContent: 'flex-end',
         alignItems: 'center',
     },
+    absoluteCellText: {
+      color: '#fff',
+      marginRight: 20,
+      fontWeight: '500',
+    },
     innerCell: {
         width: width,
         height: 80,
         marginLeft: 100,
-        backgroundColor: 'yellow',
+        backgroundColor: 'white',
         justifyContent: 'center',
         alignItems: 'center',
     }

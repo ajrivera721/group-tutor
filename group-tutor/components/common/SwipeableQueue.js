@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FlatList, StyleSheet} from 'react-native';
 import Constants from 'expo-constants';
-import { QueueItem } from '.';
+import { QueueItem } from './QueueItem';
 
 
 
