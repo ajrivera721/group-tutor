@@ -1,26 +1,22 @@
 import React from 'react';
-import { Text, View, Button, Image, TouchableOpacity } from 'react-native';
+import { Text, View, Image, TouchableOpacity } from 'react-native';
 
-const Header = ({onPress}) => {
+const Header = () => {
     const { textStyle, viewStyle } = styles;
 
     return (
         <View style={viewStyle}>
-            <TouchableOpacity
-            activeOpacity={.5}
-            onPress={onPress}
-            >
-                <Image
-                style={{ width: 30, height: 30 }}
-                source={require("../../assets/images/menu-button.png")}
-                />
-            </TouchableOpacity>
-            
-            <Button
-            style={{ borderRadius: 2 }}
-            title="CSE 100"
-            color='#1565C0'
+            <Image
+            style={{ width: 30, height: 30 }}
+            source={require("../../assets/images/unlocked.png")}
             />
+            
+            <TouchableOpacity>
+                <Text style={textStyle}>CSE 100</Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+                <Text>Logout</Text>
+            </TouchableOpacity>
         </View>
     );
 };
@@ -38,7 +34,8 @@ const styles = {
         shadowColor: '#000',
     },
     textStyle: {
-        fontSize: 20
+        fontSize: 20,
+        fontWeight: '500',
     }
 };
 
