@@ -28,7 +28,8 @@ const styles = {
         color: '#fff',
         fontSize: 14,
         fontWeight: '300',
-        paddingTop: 10
+        paddingTop: 10,
+        fontFamily: 'SFPro'
     },
     buttonStyle: {
         width: 75,

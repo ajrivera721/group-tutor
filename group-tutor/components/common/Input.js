@@ -25,13 +25,15 @@ const styles = {
         paddingRight: 5,
         paddingLeft: 5,
         fontSize: 18,
-        flex: 2
+        flex: 2,
+        fontFamily: 'SFPro'
     },
     labelStyle: {
         color: '#000',
         fontSize: 18,
         paddingLeft: 20,
-        flex: 1
+        flex: 1,
+        fontFamily: 'SFPro'
     },
     containerStyle: {
         height: 50,

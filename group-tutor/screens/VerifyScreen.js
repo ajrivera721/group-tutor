@@ -17,7 +17,7 @@ class VerifyScreen extends Component {
             <View style={{flex: 1}}>
                 <View style={{flex: 1, justifyContent: 'center'}}>
                     <Text
-                    style={{alignSelf: 'center', textAlign: 'center', color: '#000', padding: 35}}
+                    style={{alignSelf: 'center', textAlign: 'center', color: '#000', padding: 35, fontFamily: 'SFPro'}}
                     >A confirmation has been sent to the email you registered with. 
                     Please click the link in order to verify your account.</Text>
                     <Card>

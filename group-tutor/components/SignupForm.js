@@ -97,12 +97,14 @@ const styles = {
         borderWidth: 1,
         borderRadius: 2,
         borderColor: 'blue',
-        backgroundColor: 'blue'
+        backgroundColor: 'blue',
+        fontFamily: 'SFPro'
     },
     errorTextStyle: {
         fontSize: 20,
         alignSelf: 'center',
-        color: 'red'
+        color: 'red',
+        fontFamily: 'SFPro'
     }
 };
 

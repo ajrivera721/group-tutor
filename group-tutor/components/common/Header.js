@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <View style={viewStyle}>
             <Image
-            style={{ width: 30, height: 30 }}
+            style={{ width: 30, height: 30, marginRight: 30 }}
             source={require("../../assets/images/unlocked.png")}
             />
             
@@ -15,7 +15,7 @@ const Header = () => {
                 <Text style={textStyle}>CSE 100</Text>
             </TouchableOpacity>
             <TouchableOpacity>
-                <Text>Logout</Text>
+                <Text style={{fontFamily: 'SFProReg', width: 60, fontSize: 14}}>Logout</Text>
             </TouchableOpacity>
         </View>
     );
@@ -34,8 +34,9 @@ const styles = {
         shadowColor: '#000',
     },
     textStyle: {
-        fontSize: 20,
-        fontWeight: '500',
+        fontSize: 25,
+        fontFamily: 'SFProSemi',
+        textAlign: 'center'
     }
 };
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, TextInput, View, Image, TouchableOpacity, Picker } from 'react-native';
+import { Text, TextInput, View, ScrollView, Image, TouchableOpacity, Picker } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import { Header, Input } from '../components/common';
 import TicketList from '../components/common/TicketList';
@@ -59,25 +59,26 @@ class QueueScreen extends Component {
 
       render() {
           return(
-              <View style={{ flex: 1 }}>
-                  <View style={{ flexDirection: 'column', justifyContent: 'space-between', paddingTop: 50, marginLeft: 20, marginRight: 20 }}>
+            <View style={{flex: 1, height: 20000}}>
+              <ScrollView>
+                  <View style={{ flexDirection: 'column', justifyContent: 'flex-start', paddingTop: 25, marginLeft: 20, marginRight: 20 }}>
                       <Text
-                      style={{ fontSize: 20, fontWeight: '500' }}>Where are you?
+                      style={{ fontSize: 20, fontFamily: 'SFProSemi' }}>Where are you?
                       </Text>
                   <TextInput
-                    style={{ borderBottomWidth: 1, paddingTop: 30, fontSize: 16 }}
+                    style={{ borderBottomWidth: 1, fontSize: 16, paddingTop: 10, fontFamily: 'SFPro' }}
                     placeholder="CSE B230"
                     label=""
                     value={this.state.location}
                     onChangeText={location => this.setState({ location })}
                     />
                   </View>
-                  <View style={{ flexDirection: 'column', justifyContent: 'space-between', paddingTop: 50, marginLeft: 20, marginRight: 20 }}>
+                  <View style={{ flexDirection: 'column', justifyContent: 'space-between', paddingTop: 25, marginLeft: 20, marginRight: 20 }}>
                       <Text
-                      style={{ fontSize: 20, fontWeight: '500' }}>I need help with...
+                      style={{ fontSize: 20, fontFamily: 'SFProSemi' }}>I need help with...
                       </Text>
                       <Picker
-                      style={{ width: 200, paddingTop: 30 }} 
+                      style={{ width: 200 }} 
                       selectedValue={this.state.topic}
                       onValueChange={(top) => this.setState({topic: top})}>
                       <Picker.Item label="Getting Started" value="getting_started" /> 
@@ -88,12 +89,12 @@ class QueueScreen extends Component {
                       <Picker.Item label="Testing" value="testing" />
                       </Picker>
                   </View>
-                  <View style={{ flexDirection: 'column', justifyContent: 'space-between', paddingTop: 50, marginLeft: 20, marginRight: 20 }}>
+                  <View style={{ flexDirection: 'column', justifyContent: 'space-between', paddingTop: 25, marginLeft: 20, marginRight: 20 }}>
                       <Text
-                      style={{ fontSize: 20, fontWeight: '500' }}>Description
+                      style={{ fontSize: 20, fontFamily: 'SFProSemi' }}>Description
                       </Text>
                       <TextInput
-                    style={{ borderBottomWidth: 1, paddingTop: 30, fontSize: 16 }}
+                    style={{ borderBottomWidth: 1, fontSize: 16, paddingTop: 10, fontFamily: 'SFPro' }}
                     placeholder="My function hello_world is not working."
                     label=""
                     value={this.state.description}
@@ -105,9 +106,10 @@ class QueueScreen extends Component {
                       style={{ borderRadius: 5, backgroundColor: 'black', borderColor: 'black' }}
                       onPress={this.sendRequest.bind(this)}
                       >
-                          <Text style={{ fontSize: 20, fontWeight: '500', color: '#fff', padding: 15 }}>Submit Request</Text>
+                          <Text style={{ fontSize: 20, color: '#fff', padding: 15, fontFamily: 'SFProSemi' }}>Submit Request</Text>
                       </TouchableOpacity>
                   </View>
+              </ScrollView>
               </View>
           );
       }
