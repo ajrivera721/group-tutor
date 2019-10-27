@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, TextInput, View, ScrollView, Image, TouchableOpacity, Picker } from 'react-native';
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { createSwitchNavigator, createAppContainer } from 'react-navigation';
 import { Header, Input } from '../components/common';
 import TicketList from '../components/common/TicketList';
 import firebase from 'firebase';
@@ -17,7 +17,7 @@ class QueueScreen extends Component {
     render() {
       return (
         <View style={styles.container}>
-            <Header />
+            <Header onPress={() => firebase.auth().signOut().then(this.props.navigation.navigate('Login'))}/>
             <TicketList />
             <View style={{ flexDirection: 'row', justifyContent: 'flex-end', padding: 40 }}>
                 <TouchableOpacity
@@ -45,21 +45,46 @@ class QueueScreen extends Component {
 
         var db = firebase.firestore();
 
-        db.collection("requests").add({
-         course: "CSE 100",
-         std_name: firebase.auth().currentUser.email,
-         topic: this.state.topic,
-         location: this.state.location,
-         description: this.state.description,
-        });
+        var db = firebase.firestore();
+
+        db.collection('tickets').get()
+        .then((snapshot) => {
+        snapshot.forEach((doc) => {
+            console.log(doc.data().topic);
+            console.log(this.state.topic);
+      if (doc.data().topic == this.state.topic) {
+          var description = doc.data().description;
+          db.collection('tickets').doc(description).set({ 
+              description: doc.data().description,
+              status: doc.data().status,
+              students: doc.data().students + 1,
+              topic: doc.data().topic,
+              tutor: doc.data().tutor
+            })
+            throw EarlyExit;
+      } else {
+          db.collection('tickets').doc(this.state.description).set({
+              description: this.state.description,
+              status: "unresolved",
+              students: 1,
+              topic: this.state.topic,
+              tutor: ""
+          })
+      }
+    });
+    })
+    .catch((err) => {
+    console.log('Error getting documents', err);
+    });
+
+
         
 
-        this.props.navigation.goBack();
     }
 
       render() {
           return(
-            <View style={{flex: 1, height: 20000}}>
+            <View style={{flex: 1, paddingTop: 50}}>
               <ScrollView>
                   <View style={{ flexDirection: 'column', justifyContent: 'flex-start', paddingTop: 25, marginLeft: 20, marginRight: 20 }}>
                       <Text
@@ -80,7 +105,7 @@ class QueueScreen extends Component {
                       <Picker
                       style={{ width: 200 }} 
                       selectedValue={this.state.topic}
-                      onValueChange={(top) => this.setState({topic: top})}>
+                      onValueChange={(itemValue, itemIndex) => this.setState({ topic: itemValue })}>
                       <Picker.Item label="Getting Started" value="getting_started" /> 
                       <Picker.Item label="Specifications" value="specifications" />
                       <Picker.Item label="Algorithms" value="algorithms" />
@@ -109,6 +134,13 @@ class QueueScreen extends Component {
                           <Text style={{ fontSize: 20, color: '#fff', padding: 15, fontFamily: 'SFProSemi' }}>Submit Request</Text>
                       </TouchableOpacity>
                   </View>
+                  <View style={{ alignItems: 'center' }}>
+                      <TouchableOpacity
+                      onPress={() => this.props.navigation.navigate('Queue')}
+                      >
+                          <Text style={{fontFamily: 'SFPro', color: 'blue'}}>Go Back</Text>
+                      </TouchableOpacity>
+                  </View>
               </ScrollView>
               </View>
           );
@@ -126,7 +158,7 @@ class QueueScreen extends Component {
     },
   };
 
-  const DrawerNavigator = createStackNavigator({
+  const DrawerNavigator = createSwitchNavigator({
     Queue: {
       screen: QueueScreen,
     },

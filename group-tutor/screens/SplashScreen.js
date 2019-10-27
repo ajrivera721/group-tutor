@@ -39,7 +39,7 @@ class SplashScreen extends Component {
     }
 
     onLoginFail() {
-        this.props.navigation.navigate('MainStudent');
+        this.props.navigation.navigate('Login');
     }
 
     render() {

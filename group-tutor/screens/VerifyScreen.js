@@ -27,6 +27,11 @@ class VerifyScreen extends Component {
                         Resend Verification
                     </Button>
                     </CardSection>
+                    <CardSection>
+                        <Text 
+                        style={{alignSelf: 'center', marginTop: 50, color: 'blue', fontFamily: 'SFPro'}}
+                        onPress={() => this.props.navigation.navigate('Login')}>Go Back</Text>
+                    </CardSection>
                     </Card>
                 </View>
             </View>

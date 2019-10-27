@@ -12,7 +12,7 @@ class SignupForm extends Component {
 
         this.setState({error: '', loading: true });
 
-        firebase.auth().createUserWithEmailAndPassword(email, password)
+        firebase.auth().createUserWithEmailAndPassword(email + ".edu", password)
             .then(this.onSignupSuccess.bind(this))
             .catch(this.onSignupFail.bind(this));
     }
@@ -96,8 +96,8 @@ const styles = {
         padding: 10,
         borderWidth: 1,
         borderRadius: 2,
-        borderColor: 'blue',
-        backgroundColor: 'blue',
+        borderColor: 'black',
+        backgroundColor: 'black',
         fontFamily: 'SFPro'
     },
     errorTextStyle: {

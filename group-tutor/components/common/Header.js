@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, Image, TouchableOpacity } from 'react-native';
 
-const Header = () => {
+const Header = ({ onPress }) => {
     const { textStyle, viewStyle } = styles;
 
     return (
@@ -14,7 +14,9 @@ const Header = () => {
             <TouchableOpacity>
                 <Text style={textStyle}>CSE 100</Text>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity
+            onPress={onPress}
+            >
                 <Text style={{fontFamily: 'SFProReg', width: 60, fontSize: 14}}>Logout</Text>
             </TouchableOpacity>
         </View>

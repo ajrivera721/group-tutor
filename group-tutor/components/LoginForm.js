@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 import { withNavigation } from 'react-navigation';
 import firebase from 'firebase';
 import { Button, Card, CardSection, Input, Spinner } from './common';
@@ -12,7 +12,7 @@ class LoginForm extends Component {
 
         this.setState({error: '', loading: true });
 
-        firebase.auth().signInWithEmailAndPassword(email, password)
+        firebase.auth().signInWithEmailAndPassword(email + ".edu", password)
             .then(this.onLoginSuccess.bind(this))
             .catch(this.onLoginFail.bind(this));
     }
@@ -99,8 +99,8 @@ const styles = {
         padding: 10,
         borderWidth: 1,
         borderRadius: 2,
-        borderColor: 'blue',
-        backgroundColor: 'blue',
+        borderColor: 'black',
+        backgroundColor: 'black',
         fontFamily: 'SFPro'
     },
     errorTextStyle: {
