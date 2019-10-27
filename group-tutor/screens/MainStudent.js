@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Text, View, Image } from 'react-native';
-import { createDrawerNavigator, createAppContainer, DrawerItems } from 'react-navigation';
-import { Button, Header, SwipeableQueue } from '../components/common';
+import { createDrawerNavigator, createAppContainer, DrawerItems, DrawerActions } from 'react-navigation';
+import { Header } from '../components/common';
+import TicketList from '../components/common/TicketList';
+import Ticket from '../components/common/Ticket';
 
 const listData = [
     {key: 'test1'},
@@ -10,6 +12,9 @@ const listData = [
 ];
 
 class QueueScreen extends Component {
+    constructor(props) {
+        super(props);
+    }
     static navigationOptions = {
       drawerLabel: 'Queue',
       drawerIcon: (
@@ -18,20 +23,13 @@ class QueueScreen extends Component {
           source={require("../assets/images/queue.png")}
           />
       ),
-      headerRight: () => (
-          <Button
-          onPress={() => alert('This is a button!')}
-          title = "Info"
-          color = '#000'
-          />
-      ),
     };
-  
+
     render() {
       return (
         <View style={styles.container}>
-            <Header headerText="Hello" />
-            <SwipeableQueue style={styles.list} data={listData} />
+            <Header onPress={ () => this.props.navigation.dispatch(DrawerActions.openDrawer())} />
+            <TicketList />
         </View>
       );
     }
@@ -50,7 +48,9 @@ class QueueScreen extends Component {
   
     render() {
       return (
-        <View></View>
+        <View>
+            <Header onPress={ () => this.props.navigation.dispatch(DrawerActions.openDrawer())} />
+        </View>
       );
     }
   }
@@ -68,7 +68,9 @@ class QueueScreen extends Component {
   
     render() {
       return (
-        <View></View>
+        <View>
+            <Header onPress={ () => this.props.navigation.dispatch(DrawerActions.openDrawer())} />
+        </View>
       );
     }
   }

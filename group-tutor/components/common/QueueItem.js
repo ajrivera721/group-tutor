@@ -62,6 +62,7 @@ class QueueItem extends React.Component {
 
     render() {
         return (
+          <View>
         <View style={styles.queueItemLeft}>
             <Animated.View 
             style={[this.state.position.getLayout()]} 
@@ -93,6 +94,7 @@ class QueueItem extends React.Component {
             </Text>
         </View>
         </Animated.View>
+    </View>
     </View>
         );
     }
