@@ -17,8 +17,8 @@ const Ticket = ({ ticket }) => {
 
     var colors = {
         resolved: '#2ECC71',
-        unresolved: '#F39C12',
-        in_progress: '#F1C40F',
+        unresolved: '#F5F5F5',
+        in_progress: '#FFEB3B',
     };
 
     var status_string = JSON.stringify(status);

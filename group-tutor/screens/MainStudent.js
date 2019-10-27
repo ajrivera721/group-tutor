@@ -79,7 +79,7 @@ class QueueScreen extends Component {
     <View>
       <View
         style={{
-          backgroundColor: 'blue',
+          backgroundColor: '#1565C0',
           height: 200,
           alignItems: 'center',
           justifyContent: 'center',

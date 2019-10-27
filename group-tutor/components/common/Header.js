@@ -10,16 +10,16 @@ const Header = ({onPress}) => {
             activeOpacity={.5}
             onPress={onPress}
             >
-            <Image
-            style={{ width: 30, height: 30 }}
-            source={require("../../assets/images/menu-button.png")}
-            />
+                <Image
+                style={{ width: 30, height: 30 }}
+                source={require("../../assets/images/menu-button.png")}
+                />
             </TouchableOpacity>
             
             <Button
-            onPress={() => alert('This will display the classes you are enrolled in.')}
+            style={{ borderRadius: 2 }}
             title="CSE 100"
-            color='blue'
+            color='#1565C0'
             />
         </View>
     );
