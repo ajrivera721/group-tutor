@@ -37,7 +37,7 @@ const Ticket = ({ ticket }) => {
                     <Text style={styles.topicTextStyle}>{topic}</Text>
                 </View>
                 <View>
-                    <Text>{tutor}</Text>
+                    <Text style={{fontFamily: 'SFProReg'}}>{tutor}</Text>
                 </View>
                 <View style={styles.bottomStyle}>
                     <View>
@@ -47,7 +47,7 @@ const Ticket = ({ ticket }) => {
                         />
                     </View>
                     <View>
-                        <Text style={{ paddingLeft: 10 }}>{students}</Text>
+                        <Text style={{ paddingLeft: 10, fontFamily: 'SFPro' }}>{students}</Text>
                     </View>
                 </View>
             </View>
@@ -72,8 +72,8 @@ const styles = {
         paddingBottom: 10,
     },
     topicTextStyle: {
+        fontFamily: 'SFProSemi',
         fontSize: 20,
-        fontWeight: "500",
         paddingTop: 10,
     },
 };

@@ -30,11 +30,21 @@ export default class App extends React.Component {
     async componentWillMount() {
       await Expo.Font.loadAsync({
         'SFPro': require('./assets/fonts/SFProText-Light.otf'),
+        'SFProReg': require('./assets/fonts/SFProReg.otf'),
+        'SFProSemi': require('./assets/fonts/SFProSemi.otf'),
       });
       this.setState({ fontLoaded: true });
     }
   
+  renderApp() {
+    if (this.state.fontLoaded == true) {
+      return <AppContainer />;
+    } else {
+      return <View></View>;
+    }
+  }
+
   render() {
-    return <AppContainer />;
+    return this.renderApp();
   }
 }

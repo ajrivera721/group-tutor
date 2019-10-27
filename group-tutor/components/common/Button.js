@@ -20,7 +20,8 @@ const styles = {
         fontSize: 20,
         fontWeight: '300',
         paddingTop: 20,
-        paddingBottom: 20
+        paddingBottom: 20,
+        fontFamily: 'SFPro'
     },
     buttonStyle: {
         flex: 1,

@@ -17,9 +17,9 @@ class LoginScreen extends Component {
           </View>
           <View style={{flex: 1, justifyContent: 'flex-start'}}>
             <LoginForm />
-            <Text style={{alignSelf: 'center', marginTop: 20, color: '#000'}}>Don't have an account?</Text>
+            <Text style={{alignSelf: 'center', marginTop: 20, color: '#000', fontFamily: 'SFPro'}}>Don't have an account?</Text>
             <Text 
-            style={{alignSelf: 'center', marginTop: 10, color: 'blue'}}
+            style={{alignSelf: 'center', marginTop: 10, color: 'blue', fontFamily: 'SFPro'}}
             onPress={() => this.props.navigation.navigate('Signup')}>Sign up</Text>
           </View>
         </View>
