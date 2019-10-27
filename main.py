@@ -31,7 +31,12 @@ def cosine_sim(text1, text2):
     return ratio
 
 def parse_json(data, context):
-    q = pd.read_csv("queues.csv", names=["course","names","topic","tag", "location","descriptions"])
+    try:
+        q = pd.read_csv("queues.csv", names=["course","names","topic","tag", "location","descriptions"])
+    except:
+        q = pd.DataFrame({"course":j["course"],"names":[j["name"]],"topic":j["topic"],"tag":j["tag"], "location":j["location"],"descriptions":[j["description"]]})
+        q.to_csv("queues.csv", index=False, header=False)
+        return
     with open(data['name'], 'r') as f:
         j = json.load(f)
     for index,ticket in q.iterrows():
@@ -44,3 +49,4 @@ def parse_json(data, context):
                     q.to_csv("queues.csv", index=False, header=False)
                     return
     q = q.append({"course":j["course"],"names":[j["name"]],"topic":j["topic"],"tag":j["tag"], "location":j["location"],"descriptions":[j["description"]]}, ignore_index=True)
+    q.to_csv("queues.csv", index=False, header=False)
